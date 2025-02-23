@@ -1,0 +1,37 @@
+---
+import data from "@data/data.json";
+---
+
+<header
+  x-bind:class={`showHeader ? 'md: !translate-y-0' : ''`}
+  class="duration-500 transition delay-200 md:-translate-y-full flex bg-translate md:backdrop-blur-lg overflow-hidden md:bg-white/90 text-[#444444] py-2 md:py-4 h-[60px] md:h-[80px] items-center fixed top-0 left-0 z-50 w-full px-1 md:px-4"
+>
+  <div class="w-full mx-auto flex justify-between items-center px-2 md:px-0">
+    <div
+      class="md:hidden absolute z-0 top-0 left-0 h-32 w-full bg-gradient-to-b from-white via-transparent to-transparent"
+    >
+    </div>
+    <h1 class="text-2xl relative font-bold">
+      <img
+        src="/img/common/logo.png"
+        class="h-8 md:h-[36px] w-auto"
+        alt="西日暮里はやし歯科"
+        width="570"
+        height="80"
+      />
+    </h1>
+    <nav class="ml-auto relative z-10">
+      <button
+        class="size-10 md:size-12 cursor-pointer"
+        x-on:click="showSPMenu=true"
+        aria-label="メニュー"
+      >
+        <img
+          src="/img/common/hamburger.png"
+          alt=""
+          class="size-10 md:size-12"
+        />
+      </button>
+    </nav>
+  </div>
+</header>

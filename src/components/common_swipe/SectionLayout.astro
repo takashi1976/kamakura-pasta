@@ -1,0 +1,16 @@
+---
+interface Props {
+  addClass?: string;
+  id?: string;
+}
+
+const { addClass = "", id } = Astro.props;
+---
+
+<section
+  id=`${id}`
+  name=`${id}`
+  class={`${addClass}   h-svh snap-always min-h-svh  snap-start flex items-center justify-center flex-col jusity-between  `}
+>
+  <slot />
+</section>

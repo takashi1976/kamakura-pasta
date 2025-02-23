@@ -1,0 +1,21 @@
+---
+interface Props {
+  title?: string;
+  add_class?: string;
+  over_point?: boolean;
+}
+const { title, add_class, over_point } = Astro.props;
+---
+
+<h2
+  class={`${add_class} js-animation-fade opacity-0 translate-y-12 transition duration-1000  ease-out font-noto font-kerning font-bold text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl 2xl:leading-tight mb-4 lg:mb-6 xl:mb-8 2xl:mb-10 relative leading-tight`}
+  set:html={title}
+>
+  {
+    over_point && (
+      <span class="font-kerning-none absolute -top-6 md:-top-11 left-0 font-noto font-kerning_ font-bold text-2xl lg:text-4xl xl:text-5xl 2xl:text-6xl 2xl:leading-tight  text-[#F15A24]">
+        ・・
+      </span>
+    )
+  }
+</h2>

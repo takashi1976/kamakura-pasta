@@ -1,0 +1,16 @@
+---
+interface Props {
+  addClass?: string;
+  id?: string;
+  pattern?: number;
+}
+const { addClass, id, pattern = 1 } = Astro.props;
+---
+
+<section
+  id=`${id}`
+  name=`${id}`
+  class={`${pattern === 1 ? "bg-white" : "bg-[#F1FBFF] "} w-full py-20 overflow-hidden min-h-svh h-svh snap-start snap-always `}
+>
+  <slot />
+</section>

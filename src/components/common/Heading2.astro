@@ -1,0 +1,32 @@
+---
+interface Props {
+  text?: string;
+}
+const { text } = Astro.props;
+
+// `<br />` を含んでいるか判定し、`size` を変更
+const size = text?.includes("<br />")
+  ? "h-8 md:h-16 w-auto"
+  : "h-12 md:h-24 w-auto";
+---
+
+<div class="flex items-center justify-center mb-4 md:mb-9">
+  <img
+    src="/img/common/ico_leaf.png"
+    alt=""
+    class={`${size}`}
+    width="110"
+    height="200"
+  />
+  <p
+    class="text-lg md:text-3xl leading-6 md:leading-12 tracking-wider md:tracking-widest px-1.5 md:px-3 text-center"
+    set:html={text}
+  />
+  <img
+    src="/img/common/ico_leaf.png"
+    alt="月桂樹の葉"
+    class={`${size} scale-x-[-1]`}
+    width="110"
+    height="200"
+  />
+</div>

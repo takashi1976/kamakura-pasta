@@ -1,0 +1,100 @@
+---
+import data from "@data/data.json";
+
+import hero1 from "../../img/hero/hero1.png";
+import hero2 from "../../img/hero/hero2.png";
+import hero3 from "../../img/hero/hero3.png";
+import logo from "../../img/hero/logo.png";
+import { Image } from "astro:assets";
+const img = [hero1, hero2, hero3];
+const transitionImage = "opacity-0 duration-1500  transition  ";
+const transitionText = "opacity-0 duration-1000  transition translate-y-4 ";
+---
+
+<section
+  id="hero"
+  name="hero"
+  x-data="{ visible: false }"
+  x-intersect.threshold.10="visible = true;showHeader=false"
+  x-intersect:leave="visible = false"
+  class="bg-amber-100 pt-0 pb-0 w-full relative h-svh min-h-svh overflow-hidden snap-always snap-start md:p-12"
+>
+  <div
+    class="h-full w-full grid grid-cols-1 max-w-screen-sm_ mx-auto relative overflow-hidden md:rounded-xl bg-white)"
+  >
+    <div
+      class="absolute top-0 left-0 bg-red-500 text-white z-50"
+      x-text="visibleBody"
+    >
+    </div>
+    <Image src={logo} alt="logo" class="absolute top-4 left-4 size-16 z-40" />
+    <div
+      class="flex flex-col absolute h-full w-full bg-black/40_ text-white items-center justify-center z-50"
+    >
+      <div
+        class={` flex bg-red-200_ flex-col items-end   font-hina vertical-text leading-14_ tracking-widest text-4xl/10 md:text-6xl/18 -indent-4.5 mb-2`}
+      >
+        <p
+          class={`${transitionText} delay-1800`}
+          x-bind:class={`visibleBody ? '!opacity-100 !translate-0' : ''`}
+        >
+          鎌倉パスタ
+        </p><p
+          class={`${transitionText} md:text-5xl/18 delay-2300`}
+          x-bind:class={`visibleBody ? '!opacity-100 !translate-0' : ''`}
+        >
+          春日井店
+        </p>
+      </div>
+      <p
+        class={`${transitionText} delay-3000 font-hina text-lg md:text-2xl mb-2`}
+        x-bind:class={`visibleBody ? '!opacity-100 !translate-0' : ''`}
+      >
+        11:00-22:00
+      </p>
+      <p
+        class={`${transitionText} delay-3700 mb-5 font-hina text-4xl md:text-6xl`}
+        x-bind:class={`visibleBody ? '!opacity-100 !translate-0' : ''`}
+      >
+        OPEN
+      </p>
+      <p
+        class={`${transitionText} delay-4500 text-xs md:text-lg/8 text-center leading-6`}
+        x-bind:class={`visibleBody ? '!opacity-100 !translate-0' : ''`}
+      >
+        生パスタ・焼き立てパンを<br />ご用意してお待ちしております
+      </p>
+    </div>
+    <div
+      class={`overflow-hidden relative ${transitionImage} object-cover size-full -translate-x-4`}
+      x-bind:class={`visibleBody ? '!opacity-100 !translate-0' : ''`}
+    >
+      <div class="absolute bg-black/60 size-full z-30"></div>
+      <Image src={hero1} alt="ga" class="object-cover size-full" />
+    </div>
+    <div class="overflow-hidden">
+      <Image
+        src={hero2}
+        alt="ga"
+        class={`${transitionImage} object-cover w-full h-full delay-500 translate-x-4`}
+        x-bind:class={`visibleBody ? '!opacity-100 !translate-0' : ''`}
+      />
+    </div>
+    <div class="overflow-hidden">
+      <Image
+        src={hero3}
+        alt="ga"
+        class={`${transitionImage} object-cover w-full h-full delay-1000 -translate-x-4`}
+        x-bind:class={`visibleBody ? '!opacity-100 !translate-0' : ''`}
+      />
+    </div>
+  </div>
+</section>
+<section
+  x-data="{ visible: false }"
+  x-intersect.threshold.10="visible = true;showHeader=false"
+  x-intersect:leave="visible = false"
+  class="pt-0 pb-0 w-full relative h-svh min-h-svh overflow-hidden snap-always snap-start md:p-12"
+>
+  gaga
+</section>

@@ -1,0 +1,58 @@
+---
+import Layout from "@layouts/Layout.astro";
+import data from "@data/data.json";
+
+import Header from "@components/pc/Header.astro";
+import Hero from "@components/pc/Hero.astro";
+
+import SpMenu from "@components/pc/SpMenu.astro";
+---
+
+<Layout>
+  <SpMenu />
+  <button
+    class="hidden z-40 absolute right-1 top-1 size-16 flex_ items-center justify-center p-3 md:hidden text-white duration-200 transition bg-transprent"
+    x-on:click="showSPMenu=!showSPMenu"
+  >
+    <svg
+      class="w-full h-full"
+      fill="none"
+      stroke="currentColor"
+      viewBox="0 0 24 24"
+    >
+      <path
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="1"
+        d="M4 6h16M4 12h16M4 18h16"
+      >
+      </path>
+    </svg>
+  </button>
+  <div class="hidden_ md:block overflow-hidden w-full">
+    <div
+      id="snap"
+      class="overflow-hidden w-full lg:block min-h-svh h-svh snap-mandatory snap-y overflow-y-scroll scroll-smooth flex flex-col items-start justify-start"
+    >
+      <Hero />
+    </div>
+    <div
+      class="bg-white_ space-x-4_ h-18 md:hidden w-full fixed bottom-0 left-0 p-3 flex items-center z-50"
+    >
+      <a
+        href={data.cta.url}
+        target="_blank"
+        class="rounded-lg flex flex-grow_ sitems-center flex-grow justify-center bottom-0 left-0 font-bold bg-[#F2B251] text-centerrounded-sm px-3 py-3 w-full text-white text-center text-lg"
+      >
+        Web診療予約
+      </a>
+      <a href="tel:0338068148" class="flex-none ml-3 size-12">
+        <img
+          src="/img/common/phone.svg"
+          alt="0338068148へ電話"
+          class="size-12"
+        />
+      </a>
+    </div>
+  </div>
+</Layout>

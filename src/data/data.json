@@ -1,0 +1,193 @@
+{
+  "cta": {
+    "url": "https://reservation.stransa.co.jp/2916f9651b7d8fd644b9c05ee9f305e5"
+  },
+  "header": {
+    "navLinks": [
+      { "text": "ホーム", "href": "#hero" },
+      { "text": "よくあるお悩み", "href": "#problems" },
+      { "text": "集客向上できる理由", "href": "#reason" },
+      { "text": "選ばれる理由", "href": "#roi" },
+      {
+        "text": "料金",
+        "href": "#pricing",
+        "isButton": true
+      }
+    ],
+    "navLinks2": [
+      {
+        "text": "料金",
+        "href": "#pricing",
+        "isButton": true
+      }
+    ],
+
+    "navLinks_sp": [
+      { "text": "ホーム", "href": "/" },
+      { "text": "よくあるお悩み", "href": "#nayami" },
+      { "text": "私たちの強み", "href": "#about" },
+      { "text": "選ばれ続ける理由", "href": "#reason" },
+      { "text": "診療科目・設備について", "href": "#service" },
+      {
+        "text": "インビザライン・ホワイトニングについて",
+        "href": "#whitening"
+      },
+      { "text": "医院長紹介", "href": "#director" },
+      { "text": "診療時間", "href": "#worktime" },
+      { "text": "アクセス", "href": "#access" }
+    ],
+    "navLinks_sp2": [
+      {
+        "text": "WEB診療予約",
+        "href": "#",
+        "isButton": true
+      }
+    ]
+  },
+
+  "reason": [
+    {
+      "title": "西日暮里はやし歯科が選ばれ続ける理由①",
+      "copy": "生涯の歯を守る<br class='block md:block' />予防重視の治療哲学",
+      "alt": "ディスプレイで歯の状況を確認",
+      "text": "当院は「ずっと自分の歯で過ごす」という理念のもと、虫歯・歯周病の予防と早期発見・早期治療に力を入れています。定期的なクリーニングや正しい口腔ケアの指導を通じ、歯周病菌によるウィルス感染リスクの低減にも寄与するなど、全身の健康維持にもつながる包括的な予防策を提供しています。"
+    },
+    {
+      "title": "西日暮里はやし歯科が選ばれ続ける理由②",
+      "copy": "女医在籍と小児歯科への注力による<br class='block md:block' />安心感と環境作り",
+      "alt": "女医スタッフのみなさん",
+      "text": "女医が在籍しているため、特にお子さまや女性の患者さんがリラックスして治療を受けられる環境が整っています。また、小児歯科に注力している点は、幼少期から正しい口腔ケア習慣を身につけるためのサポートとなり、生涯にわたる健康な歯を守る基盤作りに大きく貢献しています。"
+    },
+    {
+      "title": "西日暮里はやし歯科が選ばれ続ける理由③",
+      "copy": "最新技術と徹底した安全管理による<br class='block md:block' />精密・安心の治療",
+      "alt": "最新機器の写真",
+      "text": "インビザラインをはじめとする先進の矯正治療、エピオスエコシステムによる清潔な水の使用、専用の滅菌機など、最新の医療機器や技術を積極的に導入しています。これにより、再発リスクを抑えた精度の高い治療と、院内感染対策を徹底した安全な診療環境が実現されています。"
+    }
+  ],
+
+  "service": [
+    {
+      "title": "虫歯治療",
+      "copy": "初期段階の処置でなるべくダメージを抑え、再発させない精密治療を。",
+      "alt": "",
+      "url": "https://www.hdc8148.com/treatment/general.html"
+    },
+    {
+      "title": "歯周病治療",
+      "copy": "成人の約8割がかかっている歯周病は全身疾患にも影響します。",
+      "alt": "",
+      "url": "https://www.hdc8148.com/treatment/perio.html"
+    },
+    {
+      "title": "予防歯科",
+      "copy": "きれいな歯並び、正しい噛み合わせは口腔内の健康につながります。",
+      "alt": "",
+      "url": "https://www.hdc8148.com/treatment/prevent.html"
+    },
+    {
+      "title": "小児矯正",
+      "copy": "子どもの頃から歯並びを整え、口腔ケアの習慣をつけてずっと健康に。",
+      "alt": "",
+      "url": "https://www.hdc8148.com/treatment/kids.html#ttl01"
+    },
+    {
+      "title": "エピオス",
+      "copy": "虫歯も歯周病も感染症。様々な感染リスクを抑える清潔な水を採用。",
+      "alt": "",
+      "url": "https://www.hdc8148.com/clinic/access.html#ttl01"
+    },
+    {
+      "title": "滅菌機",
+      "copy": "通常の滅菌機に加え、ハンドピース専用の滅菌機も採用しています。",
+      "alt": "",
+      "url": "https://www.hdc8148.com/clinic/access.html#ttl02"
+    }
+  ],
+
+  "whitening": [
+    {
+      "title": "インビザライン",
+      "copy": "矯正は「金属ワイヤーが目立つ」と思われがちですが、透明なマウスピースなら目立たず、飲食時に取り外し可能でケアも簡単。当院では、少しずつ歯を動かす「インビザライン」を導入しています。",
+      "url": "https://www.hdc8148.com/treatment/ortho.html#ttl01"
+    },
+    {
+      "title": "ホワイトニング",
+      "copy": "歯の黄ばみや黒ずみが気になる方へ。コーヒーやワイン、喫煙や加齢が原因で歯は着色します。当院のホワイトニングなら、歯を削らず薬剤で白さを取り戻せます。",
+      "url": "https://www.hdc8148.com/treatment/whitening.html"
+    }
+  ],
+
+  "hero": {
+    "title": "AGNIGHは、「まさか」を「安心」に変える。",
+    "description": "同意の証をスマホで残す、全く新しい選択肢です。",
+    "buttonText": "今すぐ無料ではじめる"
+  },
+  "features": {
+    "title": "選ばれる理由",
+    "items": [
+      {
+        "title": "【簡単】",
+        "description": "QRコード、SMS、LINEでピッと送信。<br />まるでSNSで友達にシェアするみたいに"
+      },
+      {
+        "title": "【確実】",
+        "description": "10項目の質問で、同意内容を明確化。<br />曖昧な認識のズレを防ぎます。"
+      },
+      {
+        "title": "【安心】",
+        "description": "自署サインで、合意の意思をより強固に。<br /> 確かな証拠として残します。"
+      },
+      {
+        "title": "【安全】",
+        "description": "記録は暗号化され厳重保管。<br />プライバシーも安心です。"
+      },
+      {
+        "title": "【無料】",
+        "description": "基本機能は【無料】で利用可能。<br />まずは気軽に、安心を体験してください。"
+      }
+    ]
+  },
+  "faq": {
+    "title": "よくあるQ&A",
+    "items": [
+      {
+        "question": "AGNIGHを使用すれば告訴に対抗できますか？",
+        "answer": "AGNIGHは同意の証拠として使用できますが、法的な効果は状況によって異なります。"
+      }
+    ]
+  },
+  "safety": {
+    "title": "安心・安全への取り組み",
+    "items": [
+      {
+        "title": "記録は暗号化され厳重保管",
+        "description": "プライバシーも安心です。"
+      },
+      {
+        "title": "自署サインで合意の意思を強固に",
+        "description": "確かな証拠として残します。"
+      }
+    ]
+  },
+  "start": {
+    "title": "今すぐ無料ではじめる",
+    "description": "AGNIGHを今すぐ無料で始めて、安心を手に入れましょう。",
+    "buttonText": "新規登録"
+  },
+  "footer": {
+    "copyright": "© 2023 AGNIGH. All rights reserved.",
+    "links": [
+      { "text": "運営会社", "href": "https://media.cengrit.co.jp/" },
+      { "text": "利用規約", "href": "https://agnigh.com/terms" },
+      {
+        "text": "プライバシーポリシー",
+        "href": "https://agnigh.com/privacy-policy"
+      },
+      {
+        "text": "特定商取引に基づく表記",
+        "href": "https://agnigh.com/commercial-transactions"
+      }
+    ]
+  }
+}

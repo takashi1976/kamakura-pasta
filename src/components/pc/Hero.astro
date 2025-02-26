@@ -80,6 +80,7 @@ const transitionText = "opacity-0 duration-1000  transition translate-y-4 ";
         alt="ga"
         class="object-cover size-full"
         width={"1200"}
+        x-bind:load="imagesLoaded++; if (imagesLoaded === totalImages) loaded = true"
       />
     </div>
     <div
@@ -92,6 +93,7 @@ const transitionText = "opacity-0 duration-1000  transition translate-y-4 ";
         alt="ga"
         width={"1200"}
         class={` object-cover w-full h-full _delay-500 `}
+        x-bind:load="imagesLoaded++; if (imagesLoaded === totalImages) loaded = true"
       />
     </div>
     <div
@@ -104,6 +106,7 @@ const transitionText = "opacity-0 duration-1000  transition translate-y-4 ";
         alt="ga"
         width={"1200"}
         class={` object-cover w-full h-full _delay-1000`}
+        x-bind:load="imagesLoaded++; if (imagesLoaded === totalImages) loaded = true"
       />
     </div>
   </div>

@@ -18,6 +18,15 @@ import SpMenu from "@components/pc/SpMenu.astro";
 ---
 
 <Layout>
+  <div
+    x-show="!loaded"
+    class="fixed inset-0 flex items-center justify-center bg-amber-100 z-50"
+  >
+    <div
+      class="w-12 h-12 border-4 border-gray-300 border-t-gray-900 rounded-full animate-spin"
+    >
+    </div>
+  </div>
   <SpMenu />
   <Cta />
   <button
@@ -39,7 +48,7 @@ import SpMenu from "@components/pc/SpMenu.astro";
       </path>
     </svg>
   </button>
-  <div class="hidden_ md:block overflow-hidden w-full">
+  <div class="hidden_ md:block overflow-hidden w-full" x-show="loaded">
     <div
       id="snap"
       class="overflow-hidden w-full lg:block min-h-svh h-svh snap-mandatory snap-y overflow-y-scroll scroll-smooth flex flex-col items-start justify-start"

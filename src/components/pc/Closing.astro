@@ -7,6 +7,7 @@ import { Image } from "astro:assets";
 const img = [Closing];
 const transitionImage = "opacity-0 duration-1500  transition  ";
 const transitionText = "opacity-0 duration-1000  transition translate-y-4 ";
+import CaretUp from "phosphor-astro/CaretUp.astro";
 ---
 
 <section
@@ -51,9 +52,10 @@ const transitionText = "opacity-0 duration-1000  transition translate-y-4 ";
       >
         <a
           href="#hero"
-          class="text-white border border-white p-3 px-10 rounded-md hover:opacity-60 duration-500 transition"
+          class="text-white flex items-center space-x-2 border border-white p-3 px-10 rounded-md hover:opacity-60 duration-500 transition"
         >
-          ページTOPへ戻る
+          <CaretUp class="size-7" />
+          <span>ページTOPへ戻る</span>
         </a>
       </p>
     </div>

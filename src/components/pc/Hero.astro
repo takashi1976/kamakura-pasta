@@ -22,7 +22,11 @@ const transitionText = "opacity-0 duration-1000  transition translate-y-4 ";
   <div
     class="h-full w-full grid grid-cols-1 max-w-screen-sm_ mx-auto relative overflow-hidden md:rounded-3xl bg-white)"
   >
-    <Image src={logo} alt="logo" class="absolute top-4 left-4 size-16 z-40" />
+    <Image
+      src={logo}
+      alt="logo"
+      class="absolute top-4 left-4 md:size-24 size-16 z-40"
+    />
     <div
       class="flex flex-col absolute h-full w-full bg-black/40_ text-white items-center justify-center z-50"
     >
@@ -70,10 +74,11 @@ const transitionText = "opacity-0 duration-1000  transition translate-y-4 ";
       class={`overflow-hidden relative ${transitionImage} object-cover size-full -translate-x-4`}
       x-bind:class={`visibleBody ? '!opacity-100 !translate-0' : ''`}
     >
-      <div class="absolute bg-black/60 size-full z-30"></div>
+      <div class="absolute bg-black/30 size-full z-30"></div>
       <Image src={hero1} alt="ga" class="object-cover size-full" />
     </div>
-    <div class="overflow-hidden">
+    <div class="overflow-hidden relative">
+      <div class="absolute bg-black/30 size-full z-30"></div>
       <Image
         src={hero2}
         alt="ga"
@@ -81,7 +86,8 @@ const transitionText = "opacity-0 duration-1000  transition translate-y-4 ";
         x-bind:class={`visibleBody ? '!opacity-100 !translate-0' : ''`}
       />
     </div>
-    <div class="overflow-hidden">
+    <div class="overflow-hidden relative">
+      <div class="absolute bg-black/30 size-full z-30"></div>
       <Image
         src={hero3}
         alt="ga"

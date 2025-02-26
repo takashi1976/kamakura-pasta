@@ -1,0 +1,53 @@
+---
+import { Image } from "astro:assets";
+import SectionLayout from "@components/common/SectionLayout.astro";
+import RawPasta from "../../img/rawpasta/rawpasta.png";
+import Wa from "../../img/intro/wa.png";
+import Reservation from "../../img/intro/reservation.png";
+---
+
+<SectionLayout
+  id="nayami"
+  addClass="!bg-[#503C38]"
+  pattern=""
+  description="西日暮里で歯医者をお探しの皆様へ<br />こんなお悩みありませんか？"
+>
+  <div
+    class="_ relative w-full h-full _ flex flex-col-reverse justify-between items-center md:max-w-screen-lg)_ md:mx-auto _md:px-4"
+  >
+    <div
+      class="pb-28 pt-6 md:hidden min-h-44 font-hina text-lg md:text-5xl/16 lg:text-6xl/18 bottom-16 right-16 bg-red-400_ flex flex-col items-center space-y-2"
+    >
+      <p class="text-white">40種類以上の豊富なパスタメニュー。</p>
+
+      <p class="text-white">あなた好みの一品がきっと見つかるはず。</p>
+    </div>
+    <div class="relative aspect-[2307/1388]_ w-full h-full mr-auto">
+      <div class="absolute left-[3%] top-[3%]">
+        <p
+          class="text-amber-900 text-5xl/14 lg:text-7xl 2xl:text-8xl/26 font-hina"
+        >
+          絶品生パスタ <br />
+
+          990円 <span class="text-4xl md:text-6xl">(税込)～</span>
+        </p>
+      </div>
+      <Image
+        src={RawPasta}
+        alt="ga"
+        class="object-cover object-bottom h-full"
+      />
+    </div>
+    <div
+      class="hidden md:block font-hina md:text-5xl/16 lg:text-6xl/18 absolute bottom-16 right-16 bg-red-400_ flex flex-col space-y-8"
+    >
+      <p class="text-white">
+        40種類以上の豊富な <br />パスタメニュー。
+      </p>
+
+      <p class="text-white">
+        あなた好みの一品が <br />きっと見つかるはず。
+      </p>
+    </div>
+  </div>
+</SectionLayout>

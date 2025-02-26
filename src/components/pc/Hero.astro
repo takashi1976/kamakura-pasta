@@ -17,10 +17,10 @@ const transitionText = "opacity-0 duration-1000  transition translate-y-4 ";
   x-data="{ visible: false }"
   x-intersect.threshold.10="visible = true;showHeader=false"
   x-intersect:leave="visible = false"
-  class="bg-amber-100 pt-0 pb-0 w-full relative h-svh min-h-svh overflow-hidden snap-always snap-start md:p-12"
+  class="bg-amber-100 pt-0 pb-0 w-full relative h-svh min-h-svh overflow-hidden snap-always snap-start md:p-8 lg:p-12"
 >
   <div
-    class="h-full w-full grid grid-cols-1 max-w-screen-sm_ mx-auto relative overflow-hidden md:rounded-xl bg-white)"
+    class="h-full w-full grid grid-cols-1 max-w-screen-sm_ mx-auto relative overflow-hidden md:rounded-3xl bg-white)"
   >
     <div
       class="absolute top-0 left-0 bg-red-500 text-white z-50"
@@ -32,34 +32,40 @@ const transitionText = "opacity-0 duration-1000  transition translate-y-4 ";
       class="flex flex-col absolute h-full w-full bg-black/40_ text-white items-center justify-center z-50"
     >
       <div
-        class={` flex bg-red-200_ flex-col items-end   font-hina vertical-text leading-14_ tracking-widest text-4xl/10 md:text-6xl/18 -indent-4.5 mb-2`}
+        class={` flex bg-red-200_ flex-col items-end   font-hina vertical-text leading-14_ tracking-widest  -indent-4.5 mb-2`}
       >
         <p
-          class={`${transitionText} delay-1800`}
+          class={`${transitionText} delay-1500 text-xl/12 md:text-3xl/18 mb-auto -mt-4`}
+          x-bind:class={`visibleBody ? '!opacity-100 !translate-0' : ''`}
+        >
+          生パスタ専門店
+        </p>
+        <p
+          class={`${transitionText} delay-1800 text-5xl/12 md:text-6xl/18 `}
           x-bind:class={`visibleBody ? '!opacity-100 !translate-0' : ''`}
         >
           鎌倉パスタ
         </p><p
-          class={`${transitionText} md:text-5xl/18 delay-2300`}
+          class={`${transitionText} text-4xl/12 md:text-6xl/18 delay-2100 -mb-4`}
           x-bind:class={`visibleBody ? '!opacity-100 !translate-0' : ''`}
         >
           春日井店
         </p>
       </div>
       <p
-        class={`${transitionText} delay-3000 font-hina text-lg md:text-2xl mb-2`}
+        class={`${transitionText} delay-2700 font-hina text-xl md:text-2xl mt-4 mb-2`}
         x-bind:class={`visibleBody ? '!opacity-100 !translate-0' : ''`}
       >
         11:00-22:00
       </p>
       <p
-        class={`${transitionText} delay-3700 mb-5 font-hina text-4xl md:text-6xl`}
+        class={`${transitionText} delay-3500 mb-4 font-hina text-4xl md:text-6xl`}
         x-bind:class={`visibleBody ? '!opacity-100 !translate-0' : ''`}
       >
         OPEN
       </p>
       <p
-        class={`${transitionText} delay-4500 text-xs md:text-lg/8 text-center leading-6`}
+        class={`${transitionText} delay-4300 text-base md:text-lg/8 text-center leading-6`}
         x-bind:class={`visibleBody ? '!opacity-100 !translate-0' : ''`}
       >
         生パスタ・焼き立てパンを<br />ご用意してお待ちしております
@@ -89,12 +95,4 @@ const transitionText = "opacity-0 duration-1000  transition translate-y-4 ";
       />
     </div>
   </div>
-</section>
-<section
-  x-data="{ visible: false }"
-  x-intersect.threshold.10="visible = true;showHeader=false"
-  x-intersect:leave="visible = false"
-  class="pt-0 pb-0 w-full relative h-svh min-h-svh overflow-hidden snap-always snap-start md:p-12"
->
-  gaga
 </section>

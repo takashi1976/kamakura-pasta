@@ -1,0 +1,50 @@
+---
+import { Image } from "astro:assets";
+import SectionLayout from "@components/common/SectionLayout.astro";
+import Carbonara from "../../img/carbonara/carbonara.png";
+import Kyabetu from "../../img/carbonara/kyabetu.png";
+import Cupgirl from "../../img/carbonara/cupgirl.png";
+---
+
+<SectionLayout
+  id="nayami"
+  addClass="!bg-[#A6997F]"
+  pattern=""
+  description="西日暮里で歯医者をお探しの皆様へ<br />こんなお悩みありませんか？"
+>
+  <div
+    class="relative w-full h-full flex justify-center items-center md:max-w-screen-lg)_ md:mx-auto _md:px-4"
+  >
+    <Image
+      src={Kyabetu}
+      alt="ga"
+      class="w-32 md:w-52 absolute right-0 top-0 md:top-8 -translate-y-1/2 md:translate-y-0"
+    />
+    <Image
+      src={Cupgirl}
+      alt="ga"
+      class="w-44 z-0 md:w-80 absolute -translate-x-1/2 md:translate-x-0 left-0 md:left-12 bottom-0"
+    />
+
+    <div class="aspect-square max-w-[700px] relative -mt-12 md:mt-0">
+      <div
+        class="z-10 -rotate-12 text-center space-y-1 md:space-y-4 absolute top-0 md:top-12 inset-x-0 text-white font-keifont text-xl md:text-4xl md:tracking-widest whitespace-nowrap"
+      >
+        <p>春期間限定カルボフェア</p>
+
+        <p>うにとローストビーフのうにクリームカルボ</p>
+        <p>パルメザンチーズのせ</p>
+      </div>
+      <Image
+        src={Carbonara}
+        alt="ga"
+        class="object-cover object-bottom h-full scale-105 md:scale-100 z-0"
+      />
+      <div
+        class="bg-red-200_ m-8 -rotate-12 text-center space-y-4 absolute bottom-0 md:bottom-16 inset-x-0 text-white font-keifont text-4xl md:text-7xl md:tracking-widest whitespace-nowrap"
+      >
+        <p>3/6(木)～新登場！</p>
+      </div>
+    </div>
+  </div>
+</SectionLayout>

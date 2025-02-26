@@ -3,6 +3,13 @@
   --color-agnigh: rgb(237, 124, 124);
 }
 
+@font-face {
+  font-family: "KeiFont";
+  src: url("/fonts/keifont-subset.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
 .vertical-text {
   writing-mode: vertical-rl;
   text-orientation: upright;
@@ -24,5 +31,10 @@ body {
 
 .font-hina {
   font-family: "Hina Mincho", serif;
+  font-feature-settings: "palt";
+}
+
+.font-keifont {
+  font-family: "Keifont", sans-serif;
   font-feature-settings: "palt";
 }

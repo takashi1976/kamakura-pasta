@@ -1,0 +1,24 @@
+---
+import { Image } from "astro:assets";
+import SectionLayout from "@components/common/SectionLayout.astro";
+import Carbonara from "../../img/carbonara/carbonara.png";
+import Wa from "../../img/intro/wa.png";
+import Reservation from "../../img/intro/reservation.png";
+---
+
+<SectionLayout id="nayami" addClass="!bg-[#000]" pattern="" description="">
+  <div
+    class="relative w-full h-full flex justify-center items-center md:max-w-screen-lg md:mx-auto md:px-4"
+  >
+    <video
+      class="h-full relative -mt-12 scale-110"
+      src="/img/movie/movie2.mp4"
+      class="object-cover w-full"
+      autoplay
+      loop
+      muted
+      playsinline
+    >
+    </video>
+  </div>
+</SectionLayout>

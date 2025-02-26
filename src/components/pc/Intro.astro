@@ -1,0 +1,37 @@
+---
+import { Image } from "astro:assets";
+import SectionLayout from "@components/common/SectionLayout.astro";
+import Intro from "../../img/intro/intro.png";
+import Wa from "../../img/intro/wa.png";
+import Hokkori from "../../img/intro/Hokkori.png";
+import Reservation from "../../img/intro/reservation.png";
+---
+
+<SectionLayout id="intro" addClass="!bg-[#EAE8E0]" pattern="">
+  <div
+    class="relative w-full h-full flex justify-center items-center md:max-w-screen-lg md:mx-auto md:px-4 overflow-hidden"
+  >
+    <div class="aspect-[2307/1388] relative">
+      <Image
+        src={Hokkori}
+        alt="ga"
+        class="w-32 md:w-[400px] absolute -top-12 md:top-0 right-0 -translate-y-[calc(100%+1rem)] z-30"
+      />
+      <Image
+        src={Wa}
+        alt="ga"
+        class="w-32 md:w-[200px] absolute -top-12 md:top-0 left-0 -translate-x-[40%] -translate-y-[40%] z-30"
+      />
+      <Image
+        src={Reservation}
+        alt="ga"
+        class="w-44 md:w-[250px] absolute -bottom-20 md:bottom-0 -left-4 md:left-0 md:translate-x-[20%] md:translate-y-[70%] z-20"
+      />
+      <Image
+        src={Intro}
+        alt="ga"
+        class="w-[850px] md:rounded-2xl object-cover md:scale-100 scale-150"
+      />
+    </div>
+  </div>
+</SectionLayout>

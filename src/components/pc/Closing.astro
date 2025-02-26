@@ -1,0 +1,68 @@
+---
+import data from "@data/data.json";
+
+import Closing from "../../img/closing/closing.png";
+import logo from "../../img/hero/logo.png";
+import { Image } from "astro:assets";
+const img = [Closing];
+const transitionImage = "opacity-0 duration-1500  transition  ";
+const transitionText = "opacity-0 duration-1000  transition translate-y-4 ";
+---
+
+<section
+  id="closing"
+  name="closing"
+  x-data="{ visible: false }"
+  x-intersect.threshold.10="visible = true;showHeader=false"
+  x-intersect:leave="visible = false"
+  class="bg-amber-100 pt-0 pb-0 w-full relative h-svh min-h-svh overflow-hidden snap-always snap-start md:p-0 lg:p-0"
+>
+  <div
+    class="h-full w-full grid grid-cols-1 max-w-screen-sm_ mx-auto relative overflow-hidden bg-white)"
+  >
+    <Image src={logo} alt="logo" class="absolute top-4 left-4 size-16 z-40" />
+    <div
+      class="flex flex-col absolute h-full w-full bg-black/40_ text-white items-center justify-center z-50"
+    >
+      <div
+        class={` flex _ flex-col items-end   font-hina vertical-text leading-14_ tracking-widest  -indent-4.5 mb-2`}
+      >
+        <p
+          class={`${transitionText} delay-1500 text-xl/12 md:text-3xl/18 mb-auto -mt-4`}
+          x-bind:class={`visibleBody ? '!opacity-100 !translate-0' : ''`}
+        >
+          生パスタ専門店
+        </p>
+        <p
+          class={`${transitionText} delay-1800 text-5xl/12 md:text-6xl/18 `}
+          x-bind:class={`visibleBody ? '!opacity-100 !translate-0' : ''`}
+        >
+          鎌倉パスタ
+        </p><p
+          class={`${transitionText} text-4xl/12 md:text-6xl/18 delay-2100 -mb-4`}
+          x-bind:class={`visibleBody ? '!opacity-100 !translate-0' : ''`}
+        >
+          春日井店
+        </p>
+      </div>
+      <p
+        class={`${transitionText} delay-2700 font-hina text-xl md:text-xl mt-20 mb-2`}
+        x-bind:class={`visibleBody ? '!opacity-100 !translate-0' : ''`}
+      >
+        <a
+          href="#hero"
+          class="text-white border border-white p-3 px-10 rounded-md hover:opacity-60 duration-500 transition"
+        >
+          ページTOPへ戻る
+        </a>
+      </p>
+    </div>
+    <div
+      class={`overflow-hidden relative ${transitionImage} object-cover size-full translate-y-4`}
+      x-bind:class={`visibleBody ? '!opacity-100 !translate-0' : ''`}
+    >
+      <div class="absolute bg-black/60 size-full z-30"></div>
+      <Image src={Closing} alt="ga" class="object-cover size-full" />
+    </div>
+  </div>
+</section>

@@ -18,17 +18,20 @@ import Cupgirl from "../../img/carbonara/cupgirl.png";
     <Image
       src={Kyabetu}
       alt="ga"
-      class="w-32 md:w-52 absolute right-0 top-0 md:top-8 -translate-y-1/3 md:translate-y-0"
+      x-bind:class={`visible ? '!opacity-100 !-translate-y-1/3 ' : ''`}
+      class="delay-900 transiton opacity-0 duration-1000 w-32 md:w-52 absolute right-0 top-0 md:top-8 -translate-y-2/3 md:-translate-y-12"
     />
     <Image
       src={Cupgirl}
       alt="ga"
-      class="w-44 z-0 md:w-80 absolute -translate-x-1/2 md:translate-x-0 left-0 md:left-12 bottom-0"
+      x-bind:class={`visible ? '!opacity-100 !translate-0 ' : ''`}
+      class="delay-1200 transiton opacity-0 duration-1000 translate-y-6 w-44 z-0 md:w-80 absolute -translate-x-1/2 md:translate-x-0 left-0 md:left-12 bottom-0"
     />
 
     <div class="aspect-square max-w-[700px] relative -mt-12 md:mt-0">
       <div
-        class="flex items-center justify-center flex-col z-10 -rotate-12 text-center space-y-1 md:space-y-4 absolute top-0 md:top-12 inset-x-0 text-white font-keifont text-xl md:text-4xl xl:text-5xl md:tracking-widest whitespace-nowrap"
+        x-bind:class={`visible ? '!opacity-100 !translate-4 ' : ''`}
+        class="delay-300 transiton opacity-0 duration-1000 translate-y-0 flex items-center justify-center flex-col z-10 -rotate-12 text-center space-y-1 md:space-y-4 absolute top-0 md:top-12 inset-x-0 text-white font-keifont text-xl md:text-3xl xl:text-4xl md:tracking-widest whitespace-nowrap"
       >
         <p class="bg-yellow-800/50 py-2 inline-block px-2 mb-6">
           春期間限定カルボフェア
@@ -40,10 +43,12 @@ import Cupgirl from "../../img/carbonara/cupgirl.png";
       <Image
         src={Carbonara}
         alt="ga"
-        class="object-cover object-bottom h-full scale-105 md:scale-100 z-0"
+        x-bind:class={`visible ? '!opacity-100 !translate-0 ' : ''`}
+        class="transiton opacity-0 duration-1000 translate-y-6 object-cover object-bottom h-full scale-105 md:scale-100 z-0"
       />
       <div
-        class="_ m-8 -rotate-12 text-center space-y-4 absolute bottom-0 md:bottom-16 inset-x-0 text-white font-keifont text-4xl md:text-7xl md:tracking-widest whitespace-nowrap"
+        x-bind:class={`visible ? '!opacity-100 !translate-0 ' : ''`}
+        class="delay-600 transiton opacity-0 duration-1000 translate-y-6 m-8 -rotate-12 text-center space-y-4 absolute bottom-0 md:bottom-16 inset-x-0 text-white font-keifont text-4xl md:text-7xl md:tracking-widest whitespace-nowrap"
       >
         <p>3/6(木)～新登場！</p>
       </div>

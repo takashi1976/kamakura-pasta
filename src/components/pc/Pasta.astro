@@ -8,6 +8,7 @@ import Ikaga from "../../img/pasta/ikaga.png";
 
 import Mochi from "../../img/pasta/mochi.png";
 import Reservation from "../../img/intro/reservation.png";
+const animation = "transiton opacity-0 duration-1000 translate-y-6";
 ---
 
 <SectionLayout
@@ -25,23 +26,27 @@ import Reservation from "../../img/intro/reservation.png";
       <Image
         src={Ikaga}
         alt="こだわりの生パスタはいかがですか？"
-        class="w-[300px] md:w-[500px] absolute top-4 md:top-8 right-4 md:-right-24 translate-x-full_"
+        x-bind:class={`visible ? '!opacity-100 !translate-0 ' : ''`}
+        class={`${animation} delay-300 z-30 w-[300px] md:w-[500px] absolute top-4 md:top-8 right-4 md:-right-24 translate-x-full_`}
       />
       <Image
         src={Mochi}
         alt="もちもちツルツル"
-        class="w-32 md:w-[280px] absolute top-24 md:top-8 -left-2 md:-left-12 bg-red-200_"
+        x-bind:class={`visible ? '!opacity-100 !translate-0 ' : ''`}
+        class={`${animation} delay-600  z-30 w-32 md:w-[280px] absolute top-24 md:top-8 -left-2 md:-left-12 `}
       />
       <Image
         src={Zenpin}
         alt="全品生パスタ使用"
-        class="w-[250px] md:w-[350px] absolute -bottom-0 md:-bottom-8 -right-4 md:-right-8"
+        x-bind:class={`visible ? '!opacity-100 !translate-0 ' : ''`}
+        class={`${animation} delay-900 z-30 w-[250px] md:w-[350px] absolute -bottom-0 md:-bottom-8 -right-4 md:-right-8`}
       />
 
       <Image
         src={Pasta}
         alt="生パスタ"
-        class="object-cover object-[20% 40%] h-full"
+        x-bind:class={`visible ? '!opacity-100 !translate-0 ' : ''`}
+        class={`${animation} object-cover object-[20% 40%] h-full`}
       />
     </div>
   </div>

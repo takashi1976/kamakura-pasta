@@ -71,28 +71,39 @@ const transitionText = "opacity-0 duration-1000  transition translate-y-4 ";
       </p>
     </div>
     <div
-      class={`overflow-hidden relative ${transitionImage} object-cover size-full -translate-x-4`}
+      class={`${transitionImage} overflow-hidden relative`}
       x-bind:class={`visibleBody ? '!opacity-100 !translate-0' : ''`}
     >
       <div class="absolute bg-black/30 size-full z-30"></div>
-      <Image src={hero1} alt="ga" class="object-cover size-full" />
+      <Image
+        src={hero1}
+        alt="ga"
+        class="object-cover size-full"
+        width={"1200"}
+      />
     </div>
-    <div class="overflow-hidden relative">
+    <div
+      class={`${transitionImage} delay-150 overflow-hidden relative`}
+      x-bind:class={`visibleBody ? '!opacity-100 !translate-0' : ''`}
+    >
       <div class="absolute bg-black/30 size-full z-30"></div>
       <Image
         src={hero2}
         alt="ga"
-        class={`${transitionImage} object-cover w-full h-full delay-500 translate-x-4`}
-        x-bind:class={`visibleBody ? '!opacity-100 !translate-0' : ''`}
+        width={"1200"}
+        class={` object-cover w-full h-full _delay-500 `}
       />
     </div>
-    <div class="overflow-hidden relative">
+    <div
+      class={`overflow-hidden delay-300 relative ${transitionImage}`}
+      x-bind:class={`visibleBody ? '!opacity-100 !translate-0' : ''`}
+    >
       <div class="absolute bg-black/30 size-full z-30"></div>
       <Image
         src={hero3}
         alt="ga"
-        class={`${transitionImage} object-cover w-full h-full delay-1000 -translate-x-4`}
-        x-bind:class={`visibleBody ? '!opacity-100 !translate-0' : ''`}
+        width={"1200"}
+        class={` object-cover w-full h-full _delay-1000`}
       />
     </div>
   </div>

@@ -7,9 +7,7 @@ interface Props {
 const { title, description, pattern = 1 } = Astro.props;
 ---
 
-<div
-  class="absolute bg-red-200 top-2 left-2 flex flex-col items-center mb-6 md:mb-12"
->
+<div class="absolute top-2 left-2 flex flex-col items-center mb-6 md:mb-12">
   <h2
     class={`${pattern === 1 ? "text-[#313131]" : "text-[#805F20]"} text-lg md:text-3xl text-center mb-2 md:mb-4 font-normal`}
     set:html={title}

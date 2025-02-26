@@ -18,48 +18,14 @@ import "@fontsource/hina-mincho";
     <script
       defer
       src="https://cdn.jsdelivr.net/npm/@alpinejs/intersect@3.x.x/dist/cdn.min.js"
-    ></script>
-    <meta
-      name="description"
-      content="西日暮里から徒歩7分、新三河島駅からすぐの歯医者[西日暮里はやし歯科]平日19時まで診療。虫歯、歯周病、予防歯科などの一般診療をはじめとし、矯正治療・ホワイトニングなどの審美もサポート。痛みの少ない治療、患者さんが虫歯になりづらいよう予防のお手伝い。"
-    />
-    <meta name="robots" content="max-image-preview:large" />
-    <link rel="canonical" href="https://www.hdc8148.com/" />
-    <meta property="og:locale" content="ja_JP" />
-    <meta
-      property="og:site_name"
-      content="西日暮里の歯医者｜西日暮里はやし歯科 - 西日暮里から徒歩7分、新三河島駅からすぐの歯医者[西日暮里はやし歯科]平日19時まで診療。虫歯、歯周病、予防歯科などの一般診療をはじめとし、矯正治療・ホワイトニングなどの審美もサポート。痛みの少ない治療、患者さんが虫歯になりづらいよう予防のお手伝い。"
-    />
-    <meta property="og:type" content="website" />
-    <meta
-      property="og:title"
-      content="西日暮里の歯医者｜西日暮里はやし歯科｜西日暮里駅徒歩7分、新三河島駅すぐ"
-    />
-    <meta
-      property="og:description"
-      content="西日暮里から徒歩7分、新三河島駅からすぐの歯医者[西日暮里はやし歯科]平日19時まで診療。虫歯、歯周病、予防歯科などの一般診療をはじめとし、矯正治療・ホワイトニングなどの審美もサポート。痛みの少ない治療、患者さんが虫歯になりづらいよう予防のお手伝い。"
-    />
-
-    <meta name="twitter:card" content="summary" />
-    <meta
-      name="twitter:title"
-      content="西日暮里の歯医者｜西日暮里はやし歯科｜西日暮里駅徒歩7分、新三河島駅すぐ"
-    />
-    <meta
-      name="twitter:description"
-      content="西日暮里から徒歩7分、新三河島駅からすぐの歯医者[西日暮里はやし歯科]平日19時まで診療。虫歯、歯周病、予防歯科などの一般診療をはじめとし、矯正治療・ホワイトニングなどの審美もサポート。痛みの少ない治療、患者さんが虫歯になりづらいよう予防のお手伝い。"
-    />
+    >
+    </script>
   </head>
   <body
     x-data="{ visibleBody:false,showSPMenu:false,showHeader:false}"
     x-intersect="visibleBody = true"
     x-intersect:leave="visibleBody = false"
   >
-    <div
-      class="hidden fixed text-whtie text-3xl p-4 z-50 bottom-0"
-      x-text="showSPMenu"
-    >
-    </div>
     <slot />
   </body>
 </html>

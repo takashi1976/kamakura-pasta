@@ -18,6 +18,7 @@ import SpMenu from "@components/pc/SpMenu.astro";
 
 <Layout>
   <SpMenu />
+  <Cta />
   <button
     class="hidden z-40 absolute right-1 top-1 size-16 flex_ items-center justify-center p-3 md:hidden text-white duration-200 transition bg-transparent"
     x-on:click="showSPMenu=!showSPMenu"
@@ -59,16 +60,12 @@ import SpMenu from "@components/pc/SpMenu.astro";
       <a
         href={data.cta.url}
         target="_blank"
-        class="rounded-lg flex flex-grow_ items-center justify-center bottom-0 left-0 font-bold bg-yellow-900 text-center rounded-sm px-3 py-3 w-full text-white text-center text-lg"
+        class="h-14 leading-0 font-hina flex items-center justify-center bottom-0 left-0 font-bold bg-yellow-900 rounded-sm px-3 py-3 w-full text-white text-center text-lg"
       >
         予約する
       </a>
-      <a href="tel:0338068148" class="flex-none ml-3 size-12">
-        <img
-          src="/img/common/phone.svg"
-          alt="0338068148へ電話 "
-          class="size-12"
-        />
+      <a href="#" class="flex-none ml-3 size-12">
+        <img src="/img/common/phone.svg" alt=" " class="size-12" />
       </a>
     </div>
   </div>

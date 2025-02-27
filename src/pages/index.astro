@@ -19,15 +19,19 @@ import SpMenu from "@components/pc/SpMenu.astro";
 
 <Layout>
   <div
+    class="hidden fixed top-0 left-0 bg-black text-white z-[9999] size-24"
+    x-text="imagesLoaded"
+  >
+  </div>
+  <div
     x-show="!loaded"
     class="fixed inset-0 flex items-center justify-center bg-amber-100 z-50"
   >
     <div
-      class="w-12 h-12 border-4 border-gray-300 border-t-gray-900 rounded-full animate-spin"
+      class="w-12 h-12 border-4 border-amber-900/20 border-t-amber-900 rounded-full animate-spin"
     >
     </div>
   </div>
-  <SpMenu />
   <Cta />
   <button
     class="hidden z-40 absolute right-1 top-1 size-16 flex_ items-center justify-center p-3 md:hidden text-white duration-200 transition bg-transparent"

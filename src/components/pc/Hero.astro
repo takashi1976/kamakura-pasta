@@ -25,7 +25,9 @@ const transitionText = "opacity-0 duration-1000  transition translate-y-4 ";
     <Image
       src={logo}
       alt="logo"
+      loading="eager"
       class="absolute top-4 left-4 md:size-24 size-16 z-40"
+      x-bind:load="imagesLoaded++; if (imagesLoaded === totalImages) loaded = true"
     />
     <div
       class="flex flex-col absolute h-full w-full bg-black/40_ text-white items-center justify-center z-50"
@@ -80,6 +82,7 @@ const transitionText = "opacity-0 duration-1000  transition translate-y-4 ";
         alt="ga"
         class="object-cover size-full"
         width={"1200"}
+        loading="lazy"
         x-bind:load="imagesLoaded++; if (imagesLoaded === totalImages) loaded = true"
       />
     </div>
@@ -93,6 +96,7 @@ const transitionText = "opacity-0 duration-1000  transition translate-y-4 ";
         alt="ga"
         width={"1200"}
         class={` object-cover w-full h-full _delay-500 `}
+        loading="lazy"
         x-bind:load="imagesLoaded++; if (imagesLoaded === totalImages) loaded = true"
       />
     </div>
@@ -106,6 +110,7 @@ const transitionText = "opacity-0 duration-1000  transition translate-y-4 ";
         alt="ga"
         width={"1200"}
         class={` object-cover w-full h-full _delay-1000`}
+        loading="lazy"
         x-bind:load="imagesLoaded++; if (imagesLoaded === totalImages) loaded = true"
       />
     </div>

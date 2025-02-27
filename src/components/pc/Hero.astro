@@ -5,20 +5,24 @@ import hero1 from "../../img/hero/hero1.png";
 import hero2 from "../../img/hero/hero2.png";
 import hero3 from "../../img/hero/hero3.png";
 import logo from "../../img/hero/logo.png";
+import SwipeButton from "@components/common/SwipeButton.astro";
+
 import { Image } from "astro:assets";
 const img = [hero1, hero2, hero3];
-const transitionImage = "opacity-0 duration-1500  transition  ";
+const transitionImage = "opacity-0 duration-1500 translate-x-4 transition  ";
+const transitionImage2 = "opacity-0 duration-1500 -translate-x-4 transition  ";
 const transitionText = "opacity-0 duration-1000  transition translate-y-4 ";
 ---
 
 <section
-  id="hero"
-  name="hero"
+  id="top"
+  name="top"
   x-data="{ visible: false }"
-  x-intersect.threshold.10="visible = true;showHeader=false"
+  x-intersect.threshold.10="visible = true;showHeader=false;currentSection='hero'"
   x-intersect:leave="visible = false"
-  class="bg-amber-100 pt-0 pb-0 w-full relative h-svh min-h-svh overflow-hidden snap-always snap-start md:p-8 lg:p-12"
+  class="bg-amber-100 pt-0 pb-0 w-full relative h-svh min-w-full min-h-svh overflow-hidden snap-always snap-start md:p-8 lg:p-12"
 >
+  <SwipeButton />
   <div
     class="h-full w-full grid grid-cols-1 max-w-screen-sm_ mx-auto relative overflow-hidden md:rounded-3xl bg-white)"
   >
@@ -74,7 +78,8 @@ const transitionText = "opacity-0 duration-1000  transition translate-y-4 ";
     </div>
     <div
       class={`${transitionImage} overflow-hidden relative`}
-      x-bind:class={`visibleBody ? '!opacity-100 !translate-0' : ''`}
+      x-bind:class={`visible ? '!opacity-100 !translate-0 ' : ''`}
+      x-bind:load="imagesLoaded++; if (imagesLoaded === totalImages) loaded = true"
     >
       <div class="absolute bg-black/30 size-full z-30"></div>
       <Image
@@ -83,12 +88,12 @@ const transitionText = "opacity-0 duration-1000  transition translate-y-4 ";
         class="object-cover size-full"
         width={"1200"}
         loading="lazy"
-        x-bind:load="imagesLoaded++; if (imagesLoaded === totalImages) loaded = true"
       />
     </div>
     <div
-      class={`${transitionImage} delay-150 overflow-hidden relative`}
-      x-bind:class={`visibleBody ? '!opacity-100 !translate-0' : ''`}
+      class={`${transitionImage2} delay-200 overflow-hidden relative`}
+      x-bind:class={`visible ? '!opacity-100 !translate-0 ' : ''`}
+      x-bind:load="imagesLoaded++; if (imagesLoaded === totalImages) loaded = true"
     >
       <div class="absolute bg-black/30 size-full z-30"></div>
       <Image
@@ -97,12 +102,12 @@ const transitionText = "opacity-0 duration-1000  transition translate-y-4 ";
         width={"1200"}
         class={` object-cover w-full h-full _delay-500 `}
         loading="lazy"
-        x-bind:load="imagesLoaded++; if (imagesLoaded === totalImages) loaded = true"
       />
     </div>
     <div
-      class={`overflow-hidden delay-300 relative ${transitionImage}`}
-      x-bind:class={`visibleBody ? '!opacity-100 !translate-0' : ''`}
+      class={`${transitionImage} overflow-hidden delay-400 relative `}
+      x-bind:class={`visible ? '!opacity-100 !translate-0 ' : ''`}
+      x-bind:load="imagesLoaded++; if (imagesLoaded === totalImages) loaded = true"
     >
       <div class="absolute bg-black/30 size-full z-30"></div>
       <Image
@@ -111,7 +116,6 @@ const transitionText = "opacity-0 duration-1000  transition translate-y-4 ";
         width={"1200"}
         class={` object-cover w-full h-full _delay-1000`}
         loading="lazy"
-        x-bind:load="imagesLoaded++; if (imagesLoaded === totalImages) loaded = true"
       />
     </div>
   </div>

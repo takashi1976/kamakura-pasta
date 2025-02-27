@@ -1,16 +1,33 @@
 ---
 interface Props {
   addClass?: string;
+  description?: string;
   id?: string;
   pattern?: number;
+  visibleButton?: boolean;
+  index?: number;
 }
-const { addClass, id, pattern = 1 } = Astro.props;
+import SwipeButton from "@components/common/SwipeButton.astro";
+
+const {
+  description,
+  addClass,
+  id,
+  pattern = 1,
+  visibleButton = true,
+  index
+} = Astro.props;
+import CaretRight from "phosphor-astro/CaretRight.astro";
 ---
 
 <section
+  x-data="{ visible: false }"
+  x-intersect.half={`visible = true;currentSection='${id}'`}
+  x-intersect:leave.half="visible = false"
   id=`${id}`
   name=`${id}`
-  class={`${pattern === 1 ? "bg-white" : "bg-[#F1FBFF] "} w-full py-20 overflow-hidden min-h-svh h-svh snap-start snap-always `}
+  class={`${pattern === 1 ? "bg-white" : "bg-[#F1FBFF] "} pt-12_  min-w-full pb-16_ md:pb-0  relative w-full overflow-hidden min-h-svh h-svh snap-always snap-start ${addClass}`}
 >
+  {visibleButton == true && <SwipeButton index="index" />}
   <slot />
 </section>

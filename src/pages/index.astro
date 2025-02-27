@@ -57,15 +57,35 @@ import SpMenu from "@components/pc/SpMenu.astro";
       id="snap"
       class="overflow-hidden w-full lg:block min-h-svh h-svh snap-mandatory snap-y overflow-y-scroll scroll-smooth flex flex-col items-start justify-start"
     >
-      <Hero />
-      <Intro />
-      <Pasta />
-      <RawPasta />
-      <Carbonara />
-      <Interlude />
-      <Movie />
-      <Access />
-      <Space />
+      <div
+        class="relative snap-always snap-x md:snap-y snap-start min-h-svh h-svh
+        snap-mandatory overflow-x-scroll md:overflow-y-scroll scroll-smooth flex
+        flex-row md:flex-col items-start justify-start"
+        x-data="scrollHandler('slide1')"
+        x-ref="slide1"
+      >
+        <Hero />
+        <Intro />
+        <Pasta />
+      </div>
+      <div
+        class="snap-always snap-x snap-start min-h-svh h-svh snap-mandatory overflow-x-scroll scroll-smooth flex flex-row items-start justify-start"
+        x-data="scrollHandler('slide2')"
+        x-ref="slide2"
+      >
+        <RawPasta />
+        <Carbonara />
+        <Interlude />
+      </div>
+      <div
+        class="snap-always snap-x snap-start min-h-svh h-svh snap-mandatory overflow-x-scroll scroll-smooth flex flex-row items-start justify-start"
+        x-data="scrollHandler('slide3')"
+        x-ref="slide3"
+      >
+        <Movie />
+        <Access />
+        <Space />
+      </div>
       <Closing />
       <Cta />
     </div>

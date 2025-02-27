@@ -3,6 +3,10 @@
   --color-agnigh: rgb(237, 124, 124);
 }
 
+.debugger {
+  @apply bg-blue-500 text-white px-4 py-4 top-0 left-0 z-50;
+}
+
 @font-face {
   font-family: "KeiFont";
   src: url("/fonts/keifont-subset.woff2") format("woff2");

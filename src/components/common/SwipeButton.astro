@@ -1,0 +1,27 @@
+---
+interface Props {
+  addClass?: string;
+  pattern?: number;
+  index?: number;
+}
+const { addClass = "", pattern = 1, index } = Astro.props;
+import CaretRight from "phosphor-astro/CaretRight.astro";
+---
+
+<div
+  x-bind:class={`visible ? '!opacity-100 !-translate-x-0' : ''`}
+  class={`${addClass}  z-[9999] flex -mt-20 transition translate-x-full md:hidden flex-row duration-1000 absolute right-0 inset-y-1/2 z-50`}
+>
+  <button
+    class="cursor-pointer rounded-l-lg relative bg-white/80 size-22 flex
+    items-center justify-center flex-row"
+    @click="next()"
+  >
+    <p class="vertical-text text-gray-700 z-50 relative text-sm font-bold">
+      SWIPE
+    </p>
+    <CaretRight
+      class="absolute right-0 text-gray-700 top-7 animate-bounce_ size-8"
+    />
+  </button>
+</div>

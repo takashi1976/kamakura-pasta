@@ -14,7 +14,7 @@ const { description, addClass, id, pattern = 1 } = Astro.props;
   x-intersect:leave.half="visible = false"
   id=`${id}`
   name=`${id}`
-  class={`${pattern === 1 ? "bg-white" : "bg-[#F1FBFF] "} pt-12_ pb-16_ md:pb-0  relative w-full overflow-hidden min-h-svh h-svh snap-always snap-start ${addClass}`}
+  class={`${pattern === 1 ? "bg-white" : "bg-[#F1FBFF] "} pt-12_ min-w-full pb-16_ md:pb-0  relative w-full overflow-hidden min-h-svh h-svh snap-always snap-start ${addClass}`}
 >
   <slot />
 </section>

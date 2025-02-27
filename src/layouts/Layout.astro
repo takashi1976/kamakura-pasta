@@ -18,10 +18,35 @@ import "@fontsource/hina-mincho";
     ></script>
   </head>
   <body
-    x-data="{ visibleBody:false,showSPMenu:false,showHeader:false, loaded: false, imagesLoaded: 0, totalImages: 4}"
+    x-data="{currentSection:'initial', visibleBody:false,showSPMenu:false,showHeader:false, loaded: false, imagesLoaded: 0, totalImages: 4}"
     x-intersect="visibleBody = true"
     x-intersect:leave="visibleBody = false"
   >
+    <div class="hidden debugger fixed w-full text-4xl" x-text="currentSection">
+    </div>
     <slot />
   </body>
 </html>
+
+<script is:inline>
+  function sendGAEvent(action, currentSecttion) {
+    console.log(currentSecttion);
+  }
+</script>
+<script is:inline>
+  function scrollHandler(refName) {
+    return {
+      next() {
+        const container = this.$refs[refName];
+        container.scrollBy({ left: window.innerWidth, behavior: "smooth" });
+      },
+      prev() {
+        const container = this.$refs[refName];
+        container.scrollBy({
+          left: -window.innerWidth,
+          behavior: "smooth"
+        });
+      }
+    };
+  }
+</script>

@@ -8,6 +8,7 @@
   src: url("/fonts/keifont-subset.woff2") format("woff2");
   font-weight: normal;
   font-style: normal;
+  font-display: block; /* フォントがロードされるまで何も表示しない */
 }
 
 .vertical-text {
@@ -32,9 +33,11 @@ body {
 .font-hina {
   font-family: "Hina Mincho", serif;
   font-feature-settings: "palt";
+  font-display: block; /* フォントがロードされるまで何も表示しない */
 }
 
 .font-keifont {
   font-family: "Keifont", sans-serif;
   font-feature-settings: "palt";
+  font-display: block; /* フォントがロードされるまで何も表示しない */
 }

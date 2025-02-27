@@ -2,7 +2,6 @@
 import { defineConfig } from "astro/config";
 import tailwindcss from "@tailwindcss/vite";
 import alpine from "@astrojs/alpinejs";
-import react from "@astrojs/react"; // Reactインテグレーションをインポート
 import relativeLinks from "astro-relative-links";
 // https://astro.build/config
 export default defineConfig({
@@ -10,9 +9,5 @@ export default defineConfig({
     plugins: [tailwindcss()]
   },
 
-  integrations: [
-    relativeLinks(),
-    react(),
-    alpine({ entrypoint: "/src/entrypoint" })
-  ]
+  integrations: [relativeLinks(), alpine({ entrypoint: "/src/entrypoint" })]
 });

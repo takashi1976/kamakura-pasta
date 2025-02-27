@@ -20,6 +20,7 @@ const animation = "transiton opacity-0 duration-1000 translate-y-6";
     >
       <Image
         src={Ikaga}
+        width="600"
         alt="こだわりの生パスタはいかがですか？"
         x-bind:class={`visible ? '!opacity-100 !translate-0 ' : ''`}
         class={`${animation} delay-300 z-30 w-[300px] md:w-[500px] absolute top-4 md:top-8 right-4 md:-right-24 translate-x-full_`}
@@ -27,12 +28,14 @@ const animation = "transiton opacity-0 duration-1000 translate-y-6";
       <Image
         src={Mochi}
         alt="もちもちツルツル"
+        width="400"
         x-bind:class={`visible ? '!opacity-100 !translate-0 ' : ''`}
         class={`${animation} delay-600  z-30 w-32 md:w-[280px] absolute top-24 md:top-8 -left-2 md:-left-12 `}
       />
       <Image
         src={Zenpin}
         alt="全品生パスタ使用"
+        width="500"
         x-bind:class={`visible ? '!opacity-100 !translate-0 ' : ''`}
         class={`${animation} delay-900 z-30 w-[250px] md:w-[350px] absolute -bottom-0 md:-bottom-8 -right-4 md:-right-8`}
       />
@@ -40,6 +43,7 @@ const animation = "transiton opacity-0 duration-1000 translate-y-6";
       <Image
         src={Pasta}
         alt="生パスタ"
+        width="1000"
         x-bind:class={`visible ? '!opacity-100 !translate-0 ' : ''`}
         class={`${animation} object-cover object-[20% 40%] h-full`}
       />

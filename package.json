@@ -15,7 +15,7 @@
     "@tailwindcss/vite": "^4.0.0",
     "@types/alpinejs": "^3.13.11",
     "alpinejs": "^3.14.8",
-    "astro": "^5.1.9",
+    "astro": "^5.4.0",
     "astro-relative-links": "^0.4.2",
     "phosphor-astro": "^2.1.0",
     "react": "^19.0.0",

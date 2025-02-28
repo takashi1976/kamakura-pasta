@@ -29,26 +29,26 @@ import CaretUp from "phosphor-astro/CaretUp.astro";
         class={` flex _ flex-col items-end   font-hina vertical-text leading-14_ tracking-widest  -indent-4.5 mb-2`}
       >
         <p
-          class={`${transitionText} delay-1500 text-xl/12 md:text-3xl/18 mb-auto -mt-4`}
-          x-bind:class={`visibleBody ? '!opacity-100 !translate-0' : ''`}
+          class={`${transitionText} delay-0 text-xl/12 md:text-3xl/18 mb-auto -mt-4`}
+          x-bind:class={`visible ? '!opacity-100 !translate-0' : ''`}
         >
           生パスタ専門店
         </p>
         <p
-          class={`${transitionText} delay-1800 text-5xl/12 md:text-6xl/18 `}
-          x-bind:class={`visibleBody ? '!opacity-100 !translate-0' : ''`}
+          class={`${transitionText} delay-300 text-5xl/12 md:text-6xl/18 `}
+          x-bind:class={`visible ? '!opacity-100 !translate-0' : ''`}
         >
           鎌倉パスタ
         </p><p
-          class={`${transitionText} text-4xl/12 md:text-6xl/18 delay-2100 -mb-4`}
-          x-bind:class={`visibleBody ? '!opacity-100 !translate-0' : ''`}
+          class={`${transitionText} text-4xl/12 md:text-6xl/18 delay-600 -mb-4`}
+          x-bind:class={`visible ? '!opacity-100 !translate-0' : ''`}
         >
           春日井店
         </p>
       </div>
       <p
-        class={`${transitionText} delay-2700 font-hina text-xl md:text-xl mt-20 mb-2`}
-        x-bind:class={`visibleBody ? '!opacity-100 !translate-0' : ''`}
+        class={`${transitionText} delay-1200 font-hina text-xl md:text-xl mt-20 mb-2`}
+        x-bind:class={`visible ? '!opacity-100 !translate-0' : ''`}
       >
         <a
           href="#top"
@@ -61,7 +61,7 @@ import CaretUp from "phosphor-astro/CaretUp.astro";
     </div>
     <div
       class={`overflow-hidden relative ${transitionImage} object-cover size-full translate-y-4`}
-      x-bind:class={`visibleBody ? '!opacity-100 !translate-0' : ''`}
+      x-bind:class={`visible ? '!opacity-100 !translate-0' : ''`}
     >
       <div class="absolute bg-black/40 size-full z-30"></div>
       <Image
